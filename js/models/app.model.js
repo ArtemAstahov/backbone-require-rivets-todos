@@ -13,10 +13,13 @@ define([
             this.set("todos", new TodosCollection(), {silent: true});
         },
         addTodo: function() {
-            this.get("todos").add({
-                value: this.get("input")
-            });
+            var input = this.get("input");
 
+            if (input === "") {
+                return;
+            }
+
+            this.get("todos").add({value: input});
             this.set("input", "");
         },
         reset: function() {
