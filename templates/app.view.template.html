@@ -1,0 +1,16 @@
+<div>
+    <h1>todos</h1> 
+
+    <input type="text" rv-on-keyup="view.onKeyPress" rv-input="model:input" placeholder="What needs to be done?">
+
+    <button class="btn" rv-on-click="model.reset">Clear</button>
+
+    <div>
+        <div class="todo" rv-each-todo="model:todos">
+             <div>
+                 <input type="checkbox" rv-value="todo:done">
+                 <span rv-class-done="todo:done">{todo:value}</span>
+             </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.done {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.todo {
+    padding: 2px 0;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    width: 300px;
+}

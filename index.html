@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Todos Demo</title>
+
+        <link rel="stylesheet" href="/css/main.css" type="text/css" />
+        <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="/css/bootstrap-theme.css" type="text/css" />
+
+        <script src="js/lib/require.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+
+        <script type="text/javascript" charset="utf-8">
+            require.config({
+                baseUrl: "/",
+                paths: {
+                    backbone: "js/lib/backbone.amd",
+                    rivets: "js/lib/rivets",
+                    underscore: "js/lib/lodash",
+                    templates: "templates",
+                    views: "js/views",
+                    models: "js/models",
+                    collections: "js/collections",
+                    lib: "js/lib",
+                    text: "js/lib/text"
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="main-container" class="container"></div>
+
+        <script type="text/javascript" charset="utf-8">
+            require([
+                "backbone",
+                "underscore",
+                "lib/backbone-rivets.adapter",
+                "lib/rivets.binders"
+            ], function() {
+                require(["views/app.view", "models/app.model"], function(AppView, AppModel) {
+                    var appView = new AppView({
+                        model: new AppModel(),
+                        el: "#main-container"
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
