@@ -11,6 +11,8 @@ server.listen(9002);
 
 app.use("/", express.static(path.resolve(__dirname, "..", "client")));
 
+console.log("Server is listening on port 9002 (http://localhost:9002)");
+
 io.on('connection', function(socket) {
     // When a client connects update the count
     clients++;
