@@ -1,0 +1,28 @@
+{
+  "name": "TodosDemo",
+  "version": "0.0.0",
+  "description": "backbone-require-rivets-todos =============================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steelsojka/backbone-require-rivets-todos.git"
+  },
+  "author": "Steven Sojka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steelsojka/backbone-require-rivets-todos/issues"
+  },
+  "homepage": "https://github.com/steelsojka/backbone-require-rivets-todos",
+  "dependencies": {
+    "express": "^4.7.2",
+    "lodash": "^2.4.1",
+    "socket.io": "^1.0.6"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-docco-multi": "0.0.2"
+  }
+}

@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
         <link rel="stylesheet" href="/css/bootstrap-theme.css" type="text/css" />
 
+        <script src="/socket.io/socket.io.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/lib/require.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/lib/jquery.js" type="text/javascript" charset="utf-8"></script>
 
@@ -32,12 +33,15 @@
         <div id="main-container" class="container"></div>
 
         <script type="text/javascript" charset="utf-8">
+            // Load all our lib dependencies
             require([
                 "backbone",
                 "underscore",
                 "lib/backbone-rivets.adapter",
                 "lib/rivets.binders"
             ], function() {
+
+                // Load our main app view and model
                 require(["views/app.view", "models/app.model"], function(AppView, AppModel) {
                     var appView = new AppView({
                         model: new AppModel(),
