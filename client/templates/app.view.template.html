@@ -6,12 +6,8 @@
     <button class="btn" rv-on-click="model.reset">Clear</button>
     <div>Clients connected: {model:clients}</div>
 
-    <div>
-        <div class="todo" rv-each-todo="model:todos">
-             <div>
-                 <input type="checkbox" rv-checked="todo:done" rv-on-change="view.onTodoUpdate">
-                 <span rv-class-done="todo:done">{todo:value}</span>
-             </div>
-        </div>
+    <div class="todo" rv-each-todo="model:todos">
+         <input type="checkbox" rv-checked="todo:done" rv-on-change="view.onTodoUpdate">
+         <span rv-class-done="todo:done">{todo:value}</span>
     </div>
 </div>
